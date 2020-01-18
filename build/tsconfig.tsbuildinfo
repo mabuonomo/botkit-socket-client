@@ -134,11 +134,7 @@
         "signature": "7255e9138b74f3fe8a9910bf3e711d43be1399ab8a0554bad34dc766511059be"
       },
       "../index.ts": {
-        "version": "3e3ff027dbc5c4f024171fd047dab232ee162f136ff44b9b5ec28f8c135d295d",
-        "signature": "6a8c15b04a62e1c2eb67c6f31d82d4563ab9490f9f5dc89a1009014b31963741"
-      },
-      "./index.d.ts": {
-        "version": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+        "version": "cc21a7293ca557ae4c6233869931f908afc53e143e40a702fb12ab279fb28069",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "../node_modules/@types/node/globals.d.ts": {
@@ -368,6 +364,7 @@
       "outDir": "./",
       "esModuleInterop": true,
       "project": "../tsconfig.json",
+      "watch": true,
       "configFilePath": "../tsconfig.json"
     },
     "referencedMap": {
@@ -571,12 +568,6 @@
       ],
       "../index.ts": [
         "../node_modules/@types/socket.io-client/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "./index.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -1205,12 +1196,6 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "./index.d.ts": [
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "../node_modules/@types/node/globals.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -1633,9 +1618,6 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../index.ts": [
-        "../node_modules/@types/socket.io-client/index.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -1724,7 +1706,8 @@
       "../node_modules/@types/mime/index.d.ts",
       "../node_modules/@types/serve-static/index.d.ts",
       "../node_modules/@types/express/index.d.ts",
-      "../node_modules/@types/socket.io/index.d.ts"
+      "../node_modules/@types/socket.io/index.d.ts",
+      "../index.ts"
     ]
   },
   "version": "3.7.5"
