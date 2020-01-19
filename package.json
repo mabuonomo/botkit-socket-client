@@ -10,9 +10,9 @@
     "format_checker": "prettier --check \"./src/**.js\" \"./src/**/*.ts\"",
     "tslint": "tslint -p tsconfig.json -c tslint.json",
     "tslint:fix": "tslint --fix -p tsconfig.json -c tslint.json",
-    "develop": "NODE_ENV=development webpack --mode production",
-    "watch": "NODE_ENV=development webpack --mode development --watch",
-    "build": "NODE_ENV=production webpack --mode production"
+    "develop": "NODE_ENV=dev webpack --mode production",
+    "watch": "NODE_ENV=dev webpack --mode development --watch",
+    "build": "NODE_ENV=prod webpack --mode production"
   },
   "repository": {
     "type": "git",

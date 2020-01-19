@@ -2,7 +2,7 @@ const path = require('path');
 const Dotenv = require('dotenv-webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 
-const isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.NODE_ENV === 'prod';
 
 let defaultConfig = {
   watch: !isProd,
