@@ -87,18 +87,6 @@ Botkit =
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/ws/browser.js":
-/*!************************************!*\
-  !*** ./node_modules/ws/browser.js ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\nmodule.exports = function() {\n  throw new Error(\n    'ws does not work in the browser. Browser clients must use the native ' +\n      'WebSocket object'\n  );\n};\n\n\n//# sourceURL=webpack://Botkit/./node_modules/ws/browser.js?");
-
-/***/ }),
-
 /***/ "./src/botkit.ts":
 /*!***********************!*\
   !*** ./src/botkit.ts ***!
@@ -107,7 +95,7 @@ eval("\n\nmodule.exports = function() {\n  throw new Error(\n    'ws does not wo
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar ws_1 = __webpack_require__(/*! ws */ \"./node_modules/ws/browser.js\");\n\nvar utils_1 = __webpack_require__(/*! ./utils */ \"./src/utils.ts\");\n\nvar BotKitClient =\n/** @class */\nfunction () {\n  function BotKitClient(config) {\n    this.config = config;\n    this.connectWebsocket();\n  }\n\n  BotKitClient.prototype.getGuid = function () {\n    if (!this.config.userGuid) {\n      this.config.userGuid = utils_1.generateGuid();\n    }\n\n    return this.config.userGuid;\n  };\n  /**\n   * Send e text message\n   * @param text\n   */\n\n\n  BotKitClient.prototype.send = function (text) {\n    this.deliverMessage({\n      type: utils_1.ConnectEvent.MESSAGE,\n      text: text,\n      user: this.getGuid(),\n      channel: 'websocket'\n    });\n    return false;\n  };\n  /**\n   * Create a json version of IbotKitMessage\n   * @param message\n   */\n\n\n  BotKitClient.prototype.deliverMessage = function (message) {\n    console.log(message);\n    this.socket.send(JSON.stringify(message));\n  };\n  /**\n   * Connect to remote botkit websocket\n   */\n\n\n  BotKitClient.prototype.connectWebsocket = function () {\n    // Create WebSocket connection.\n    this.socket = new ws_1.default(this.config.ws_url); // Connection opened\n\n    this.socket.addEventListener(utils_1.ListenerEvent.OPEN, function (event) {\n      console.log('CONNECTED TO SOCKET');\n      this.deliverMessage({\n        type: this.config.userGuid === undefined ? utils_1.ConnectEvent.HELLO : utils_1.ConnectEvent.WELCOME_BACK,\n        user: this.getGuid(),\n        channel: 'socket'\n      });\n    });\n    this.socket.addEventListener(utils_1.ListenerEvent.ERROR, function (event) {\n      console.error('ERROR', event);\n    });\n    this.socket.addEventListener(utils_1.ListenerEvent.CLOSE, function (event) {\n      console.log('SOCKET CLOSED!');\n    }); // Listen for messages\n\n    this.socket.addEventListener(utils_1.ListenerEvent.MESSAGE, function (event) {\n      var message = null;\n\n      try {\n        console.log('Response: ', event.data);\n        message = JSON.parse(event.data);\n      } catch (err) {\n        return;\n      }\n    });\n  };\n\n  return BotKitClient;\n}();\n\nexports.BotKitClient = BotKitClient;\n\n//# sourceURL=webpack://Botkit/./src/botkit.ts?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar utils_1 = __webpack_require__(/*! ./utils */ \"./src/utils.ts\");\n\nvar BotKitClient =\n/** @class */\nfunction () {\n  function BotKitClient(config) {\n    this.config = config;\n    this.connectWebsocket();\n  }\n\n  BotKitClient.prototype.getGuid = function () {\n    if (!this.config.userGuid) {\n      this.config.userGuid = utils_1.generateGuid();\n    }\n\n    return this.config.userGuid;\n  };\n  /**\n   * Send e text message\n   * @param text\n   */\n\n\n  BotKitClient.prototype.send = function (text) {\n    this.deliverMessage({\n      type: utils_1.ConnectEvent.MESSAGE,\n      text: text,\n      user: this.getGuid(),\n      channel: 'websocket'\n    });\n    return false;\n  };\n  /**\n   * Create a json version of IbotKitMessage\n   * @param message\n   */\n\n\n  BotKitClient.prototype.deliverMessage = function (message) {\n    console.log(message);\n    this.socket.send(JSON.stringify(message));\n  };\n  /**\n   * Connect to remote botkit websocket\n   */\n\n\n  BotKitClient.prototype.connectWebsocket = function () {\n    // Create WebSocket connection.\n    this.socket = new WebSocket(this.config.ws_url);\n    var self = this; // Connection opened\n\n    this.socket.addEventListener(utils_1.ListenerEvent.OPEN, function (event) {\n      console.log('CONNECTED TO SOCKET');\n      self.deliverMessage({\n        type: self.config.userGuid === undefined ? utils_1.ConnectEvent.HELLO : utils_1.ConnectEvent.WELCOME_BACK,\n        user: self.getGuid(),\n        channel: 'socket'\n      });\n    });\n    this.socket.addEventListener(utils_1.ListenerEvent.ERROR, function (event) {\n      console.error('ERROR', event);\n    });\n    this.socket.addEventListener(utils_1.ListenerEvent.CLOSE, function (event) {\n      console.log('SOCKET CLOSED!');\n    }); // Listen for messages\n\n    this.socket.addEventListener(utils_1.ListenerEvent.MESSAGE, function (event) {\n      var message = null;\n\n      try {\n        console.log('Response: ', event.data);\n        message = JSON.parse(event.data);\n      } catch (err) {\n        return;\n      }\n    });\n  };\n\n  return BotKitClient;\n}();\n\nexports.BotKitClient = BotKitClient;\n\n//# sourceURL=webpack://Botkit/./src/botkit.ts?");
 
 /***/ }),
 

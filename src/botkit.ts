@@ -1,11 +1,10 @@
-import ws from 'ws';
 import { IBotkitConfig } from './interfaces/config.interface';
 import { IBotkitMessage } from './interfaces/message.interface';
 import { ConnectEvent, generateGuid, ListenerEvent } from './utils';
 
 export class BotKitClient {
   config: IBotkitConfig;
-  socket: ws;
+  socket: WebSocket;
   constructor(config: IBotkitConfig) {
     this.config = config;
     this.connectWebsocket();
@@ -48,15 +47,16 @@ export class BotKitClient {
    */
   private connectWebsocket() {
     // Create WebSocket connection.
-    this.socket = new ws(this.config.ws_url);
+    this.socket = new WebSocket(this.config.ws_url);
+    const self = this;
 
     // Connection opened
-    this.socket.addEventListener(ListenerEvent.OPEN, function(event) {
+    this.socket.addEventListener(ListenerEvent.OPEN, (event) => {
       console.log('CONNECTED TO SOCKET');
 
-      this.deliverMessage({
-        type: this.config.userGuid === undefined ? ConnectEvent.HELLO : ConnectEvent.WELCOME_BACK,
-        user: this.getGuid(),
+      self.deliverMessage({
+        type: self.config.userGuid === undefined ? ConnectEvent.HELLO : ConnectEvent.WELCOME_BACK,
+        user: self.getGuid(),
         channel: 'socket',
       });
     });
