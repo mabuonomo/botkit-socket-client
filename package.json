@@ -1,11 +1,8 @@
 {
-  "name": "botkit-socketio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "botkit-socket-client",
+  "version": "0.1",
+  "description": "A small botkit socket client library written in typescript",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node build/index.js",
     "format": "prettier --config ./.prettierrc --write \"./src/**.js\" \"./src/**/*.ts\"",
     "format_checker": "prettier --check \"./src/**.js\" \"./src/**/*.ts\"",
     "tslint": "tslint -p tsconfig.json -c tslint.json",
@@ -16,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mabuonomo/botkit-socketio.git"
+    "url": "git+https://github.com/mabuonomo/botkit-socket-client.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Mario Buonomo",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mabuonomo/botkit-socketio/issues"
+    "url": "https://github.com/mabuonomo/botkit-socket-client/issues"
   },
-  "homepage": "https://github.com/mabuonomo/botkit-socketio#readme",
+  "homepage": "https://github.com/mabuonomo/botkit-socket-client#readme",
   "dependencies": {
     "@babel/polyfill": "^7.8.3",
     "@babel/preset-typescript": "^7.8.3",

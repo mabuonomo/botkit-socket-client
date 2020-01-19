@@ -16,15 +16,3 @@ format:
 
 test:
 	${command} npm run test
-
-#### CI
-checker_format:
-	${command} npm run format_checker
-
-checker_syntax:
-	${command} npm run tslint
-#### end CI
-
-### Fixers, deprecated use 'make format'
-fix_syntax:
-	${command} npm run tslint:fix
