@@ -4,31 +4,18 @@ export function generateGuid() {
       .toString(16)
       .substring(1);
   }
-  return (
-    s4() +
-    s4() +
-    "-" +
-    s4() +
-    "-" +
-    s4() +
-    "-" +
-    s4() +
-    "-" +
-    s4() +
-    s4() +
-    s4()
-  );
+  return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
 }
 
 export enum ConnectEvent {
-  HELLO = "hello",
-  WELCOME_BACK = "welcome_back",
-  MESSAGE = "message"
+  HELLO = 'hello',
+  WELCOME_BACK = 'welcome_back',
+  MESSAGE = 'message',
 }
 
 export enum ListenerEvent {
-  OPEN = "open",
-  MESSAGE = "message",
-  ERROR = "error",
-  CLOSE = "close"
+  OPEN = 'open',
+  MESSAGE = 'message',
+  ERROR = 'error',
+  CLOSE = 'close',
 }

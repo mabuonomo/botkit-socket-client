@@ -1,7 +1,7 @@
-import ws = require("ws");
-import { IBotkitConfig } from "./interfaces/config.interface";
-import { IBotkitMessage } from "./interfaces/message.interface";
-import { ConnectEvent, generateGuid, ListenerEvent } from "./utils";
+import ws from 'ws';
+import { IBotkitConfig } from './interfaces/config.interface';
+import { IBotkitMessage } from './interfaces/message.interface';
+import { ConnectEvent, generateGuid, ListenerEvent } from './utils';
 
 export default class BotKitClient {
   config: IBotkitConfig;
@@ -26,9 +26,9 @@ export default class BotKitClient {
   send(text: string) {
     this.deliverMessage({
       type: ConnectEvent.MESSAGE,
-      text: text,
+      text,
       user: this.getGuid(),
-      channel: "websocket"
+      channel: 'websocket',
     });
 
     return false;
@@ -52,31 +52,28 @@ export default class BotKitClient {
 
     // Connection opened
     this.socket.addEventListener(ListenerEvent.OPEN, function(event) {
-      console.log("CONNECTED TO SOCKET");
+      console.log('CONNECTED TO SOCKET');
 
       this.deliverMessage({
-        type:
-          this.config.userGuid === undefined
-            ? ConnectEvent.HELLO
-            : ConnectEvent.WELCOME_BACK,
+        type: this.config.userGuid === undefined ? ConnectEvent.HELLO : ConnectEvent.WELCOME_BACK,
         user: this.getGuid(),
-        channel: "socket"
+        channel: 'socket',
       });
     });
 
-    this.socket.addEventListener(ListenerEvent.ERROR, event => {
-      console.error("ERROR", event);
+    this.socket.addEventListener(ListenerEvent.ERROR, (event) => {
+      console.error('ERROR', event);
     });
 
-    this.socket.addEventListener(ListenerEvent.CLOSE, event => {
-      console.log("SOCKET CLOSED!");
+    this.socket.addEventListener(ListenerEvent.CLOSE, (event) => {
+      console.log('SOCKET CLOSED!');
     });
 
     // Listen for messages
-    this.socket.addEventListener(ListenerEvent.MESSAGE, event => {
-      var message = null;
+    this.socket.addEventListener(ListenerEvent.MESSAGE, (event) => {
+      let message = null;
       try {
-        console.log("Response: ", event.data);
+        console.log('Response: ', event.data);
         message = JSON.parse(event.data);
       } catch (err) {
         return;

@@ -1,20 +1,23 @@
 {
+    "compileOnSave": false,
     "compilerOptions": {
-        "module": "commonjs",
-        "declaration": true,
-        "removeComments": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "target": "es2017",
-        "sourceMap": false,
-        "baseUrl": "./",
-        "incremental": true,
-        "noImplicitAny": false,
-        "outDir": "build",
-        "esModuleInterop": true,
-    },
-    "exclude": [
-        "node_modules",
-        "build"
-    ]
-}
+      "baseUrl": "./",
+      "incremental": false,
+      "sourceMap": true,
+      "declaration": false,
+      "module": "CommonJS",
+      "moduleResolution": "node",
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "target": "es5",
+      "allowSyntheticDefaultImports": true,
+      "typeRoots": [
+        "node_modules/@types"
+      ],
+      "lib": [
+        "es2017",
+        "dom"
+      ]
+    }
+  }
+  
