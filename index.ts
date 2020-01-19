@@ -4,7 +4,7 @@
  */
 // var converter = new showdown.Converter();
 // converter.setOption("openLinksInNewWindow", true);
-const WebSocketWS = require("ws");
+import ws = require("ws");
 
 var Botkit = {
   config: {
@@ -137,10 +137,10 @@ var Botkit = {
       channel: "webhook"
     });
   },
-  connectWebsocket: function(ws_url) {
+  connectWebsocket: function(ws_url: string) {
     var that = this;
     // Create WebSocket connection.
-    that.socket = new WebSocketWS(ws_url);
+    that.socket = new ws(ws_url);
 
     console.log(ws_url);
 
