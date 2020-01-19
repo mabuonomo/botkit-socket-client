@@ -52,11 +52,6 @@ let defaultConfig = {
       },
     ],
   },
-  plugins: [
-    new Dotenv({
-      path: isProd ? './.env.prod' : './.env.dev',
-    }),
-  ],
   resolve: {
     alias: {
       node_modules: path.join(__dirname, 'node_modules'),
