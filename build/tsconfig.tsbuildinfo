@@ -130,8 +130,8 @@
         "signature": "873c09f1c309389742d98b7b67419a8e0a5fa6f10ce59fd5149ecd31a2818594"
       },
       "../index.ts": {
-        "version": "f43cd198a51cd4ae7c1a9ae9ecd5aa8041f95b8724c017b12f3191870e4c481f",
-        "signature": "f5c68ca30211f33a87337f5e9ef9e0618f2fad75d7587697f82fd7e5fbcfe4a8"
+        "version": "c789b3ccf5bdf14aaa332952496a7d3cddf9a76a6e0393f9859c8d6c3d9acaba",
+        "signature": "03ac65175cb8617436fe4dbaa19cd742afcb586a774a31b27edadb6f1a4e9eba"
       },
       "../node_modules/@types/node/globals.d.ts": {
         "version": "9a52fe500e1e0ed7362ae65094ec6d4f655033d21f873886211e252fc9c5b9c8",
@@ -1625,47 +1625,7 @@
       "../node_modules/typescript/lib/lib.es2016.d.ts",
       "../node_modules/typescript/lib/lib.es2017.d.ts",
       "../node_modules/typescript/lib/lib.es2018.d.ts",
-      [
-        "../node_modules/typescript/lib/lib.dom.d.ts",
-        [
-          {
-            "file": "../node_modules/typescript/lib/lib.dom.d.ts",
-            "start": 759688,
-            "length": 9,
-            "messageText": "Cannot redeclare block-scoped variable 'WebSocket'.",
-            "category": 1,
-            "code": 2451,
-            "relatedInformation": [
-              {
-                "file": "../index.ts",
-                "start": 209,
-                "length": 9,
-                "messageText": "'WebSocket' was also declared here.",
-                "category": 3,
-                "code": 6203
-              }
-            ]
-          },
-          {
-            "file": "../node_modules/typescript/lib/lib.dom.d.ts",
-            "start": 761037,
-            "length": 9,
-            "messageText": "Cannot redeclare block-scoped variable 'WebSocket'.",
-            "category": 1,
-            "code": 2451,
-            "relatedInformation": [
-              {
-                "file": "../index.ts",
-                "start": 209,
-                "length": 9,
-                "messageText": "'WebSocket' was also declared here.",
-                "category": 3,
-                "code": 6203
-              }
-            ]
-          }
-        ]
-      ],
+      "../node_modules/typescript/lib/lib.dom.d.ts",
       "../node_modules/typescript/lib/lib.dom.iterable.d.ts",
       "../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
       "../node_modules/typescript/lib/lib.scripthost.d.ts",
@@ -1746,37 +1706,7 @@
       "../node_modules/@types/express/index.d.ts",
       "../node_modules/@types/socket.io/index.d.ts",
       "../node_modules/@types/socket.io-client/index.d.ts",
-      [
-        "../index.ts",
-        [
-          {
-            "file": "../index.ts",
-            "start": 209,
-            "length": 9,
-            "messageText": "Cannot redeclare block-scoped variable 'WebSocket'.",
-            "category": 1,
-            "code": 2451,
-            "relatedInformation": [
-              {
-                "file": "../node_modules/typescript/lib/lib.dom.d.ts",
-                "start": 759688,
-                "length": 9,
-                "messageText": "'WebSocket' was also declared here.",
-                "category": 3,
-                "code": 6203
-              },
-              {
-                "file": "../node_modules/typescript/lib/lib.dom.d.ts",
-                "start": 761037,
-                "length": 9,
-                "messageText": "and here.",
-                "category": 3,
-                "code": 6204
-              }
-            ]
-          }
-        ]
-      ]
+      "../index.ts"
     ]
   },
   "version": "3.7.5"
