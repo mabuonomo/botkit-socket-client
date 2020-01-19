@@ -313,10 +313,6 @@
         "version": "e0d69f13f32c777e060ca3406c173b65170e3ea3add78b901902993f55c982ff",
         "signature": "e0d69f13f32c777e060ca3406c173b65170e3ea3add78b901902993f55c982ff"
       },
-      "../index.ts": {
-        "version": "d3494a6a278c6549d934d5f57f2b55b185cf64e01a41b0f8174392b65be00d06",
-        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
-      },
       "../src/interfaces/config.interface.ts": {
         "version": "564fe5b99ebe83b45fd58300b4119cace242f1b16aedf7ac6c8cc52665c385dd",
         "signature": "2e90334e0d420539df6b29a1077a7d4fc827dc25466ac3862be32deeca0e9682"
@@ -332,6 +328,10 @@
       "../src/botkit.ts": {
         "version": "67aa765a767c2e8043e8f96a4834a8fa265d9c35e764cfe843f226f13b0252cc",
         "signature": "82fc3d773aa5fd6f8a36ae04a75cab27c0462689683cc353b2d17a65c6d46b7d"
+      },
+      "../index.ts": {
+        "version": "4f5ab8a9a11ab739d78c02e049cb224a31ed4099899264fc14f12f64c4da38a9",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "../node_modules/@types/connect/index.d.ts": {
         "version": "e6ffa74698f0a1d23e4223242ed7dcdb89d02bbbb063a1930e9f91d0385abe16",
@@ -953,13 +953,6 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../index.ts": [
-        "../node_modules/@types/ws/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "../src/interfaces/config.interface.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -984,6 +977,13 @@
         "../src/interfaces/config.interface.ts",
         "../src/interfaces/message.interface.ts",
         "../src/utils.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../index.ts": [
+        "../src/botkit.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -1626,6 +1626,13 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/interfaces/message.interface.ts": [
+        "../src/utils.ts"
+      ],
+      "../src/botkit.ts": [
+        "../src/interfaces/config.interface.ts",
+        "../node_modules/@types/ws/index.d.ts"
+      ],
       "../node_modules/@types/connect/index.d.ts": [
         "../node_modules/@types/node/http.d.ts",
         "../node_modules/@types/node/ts3.2/index.d.ts",
@@ -1694,13 +1701,6 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/botkit.ts": [
-        "../src/interfaces/config.interface.ts",
-        "../node_modules/@types/ws/index.d.ts"
-      ],
-      "../src/interfaces/message.interface.ts": [
-        "../src/utils.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -1782,7 +1782,10 @@
       "../node_modules/@types/node/ts3.2/globals.d.ts",
       "../node_modules/@types/node/ts3.2/index.d.ts",
       "../node_modules/@types/ws/index.d.ts",
-      "../index.ts",
+      "../src/interfaces/config.interface.ts",
+      "../src/utils.ts",
+      "../src/interfaces/message.interface.ts",
+      "../src/botkit.ts",
       "../node_modules/@types/connect/index.d.ts",
       "../node_modules/@types/body-parser/index.d.ts",
       "../node_modules/@types/range-parser/index.d.ts",
@@ -1792,10 +1795,7 @@
       "../node_modules/@types/express/index.d.ts",
       "../node_modules/@types/socket.io/index.d.ts",
       "../node_modules/@types/socket.io-client/index.d.ts",
-      "../src/interfaces/config.interface.ts",
-      "../src/utils.ts",
-      "../src/interfaces/message.interface.ts",
-      "../src/botkit.ts"
+      "../index.ts"
     ]
   },
   "version": "3.7.5"
