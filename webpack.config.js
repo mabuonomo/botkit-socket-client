@@ -7,7 +7,7 @@ const isProd = process.env.NODE_ENV === 'production';
 let defaultConfig = {
   watch: !isProd,
   entry: {
-    botkit: './src/index.ts',
+    botkit: './src/botkit.ts',
   },
   output: {
     library: 'Botkit',

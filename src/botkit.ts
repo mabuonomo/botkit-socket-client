@@ -3,7 +3,7 @@ import { IBotkitConfig } from './interfaces/config.interface';
 import { IBotkitMessage } from './interfaces/message.interface';
 import { ConnectEvent, generateGuid, ListenerEvent } from './utils';
 
-export default class BotKitClient {
+export class BotKitClient {
   config: IBotkitConfig;
   socket: ws;
   constructor(config: IBotkitConfig) {
