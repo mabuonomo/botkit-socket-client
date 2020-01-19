@@ -195,7 +195,7 @@ var Botkit = {
         that.socket.addEventListener("message", function (event) {
             var message = null;
             try {
-                console.log(event.data);
+                console.log("Response: ", event.data);
                 message = JSON.parse(event.data);
             }
             catch (err) {
