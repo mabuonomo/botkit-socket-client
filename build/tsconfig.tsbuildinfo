@@ -129,13 +129,9 @@
         "version": "873c09f1c309389742d98b7b67419a8e0a5fa6f10ce59fd5149ecd31a2818594",
         "signature": "873c09f1c309389742d98b7b67419a8e0a5fa6f10ce59fd5149ecd31a2818594"
       },
-      "../node_modules/@types/socket.io-client/index.d.ts": {
-        "version": "7255e9138b74f3fe8a9910bf3e711d43be1399ab8a0554bad34dc766511059be",
-        "signature": "7255e9138b74f3fe8a9910bf3e711d43be1399ab8a0554bad34dc766511059be"
-      },
       "../index.ts": {
-        "version": "cc21a7293ca557ae4c6233869931f908afc53e143e40a702fb12ab279fb28069",
-        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+        "version": "b12842bfbc56f639ce0b4834cbad35141b51077620ca6f1b101346444bd51091",
+        "signature": "f5c68ca30211f33a87337f5e9ef9e0618f2fad75d7587697f82fd7e5fbcfe4a8"
       },
       "../node_modules/@types/node/globals.d.ts": {
         "version": "9a52fe500e1e0ed7362ae65094ec6d4f655033d21f873886211e252fc9c5b9c8",
@@ -348,6 +344,10 @@
       "../node_modules/@types/socket.io/index.d.ts": {
         "version": "17868dee2559ec6f6b6f5c996cdf22e9b17da693d8c88ee4635a3a28d8264c61",
         "signature": "17868dee2559ec6f6b6f5c996cdf22e9b17da693d8c88ee4635a3a28d8264c61"
+      },
+      "../node_modules/@types/socket.io-client/index.d.ts": {
+        "version": "7255e9138b74f3fe8a9910bf3e711d43be1399ab8a0554bad34dc766511059be",
+        "signature": "7255e9138b74f3fe8a9910bf3e711d43be1399ab8a0554bad34dc766511059be"
       }
     },
     "options": {
@@ -560,14 +560,7 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../node_modules/@types/socket.io-client/index.d.ts": [
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "../index.ts": [
-        "../node_modules/@types/socket.io-client/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -991,6 +984,12 @@
       ],
       "../node_modules/@types/socket.io/index.d.ts": [
         "../node_modules/@types/node/ts3.2/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/socket.io-client/index.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -1190,12 +1189,6 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../node_modules/@types/socket.io-client/index.d.ts": [
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "../node_modules/@types/node/globals.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -1618,6 +1611,12 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/socket.io-client/index.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -1626,7 +1625,47 @@
       "../node_modules/typescript/lib/lib.es2016.d.ts",
       "../node_modules/typescript/lib/lib.es2017.d.ts",
       "../node_modules/typescript/lib/lib.es2018.d.ts",
-      "../node_modules/typescript/lib/lib.dom.d.ts",
+      [
+        "../node_modules/typescript/lib/lib.dom.d.ts",
+        [
+          {
+            "file": "../node_modules/typescript/lib/lib.dom.d.ts",
+            "start": 759688,
+            "length": 9,
+            "messageText": "Cannot redeclare block-scoped variable 'WebSocket'.",
+            "category": 1,
+            "code": 2451,
+            "relatedInformation": [
+              {
+                "file": "../index.ts",
+                "start": 209,
+                "length": 9,
+                "messageText": "'WebSocket' was also declared here.",
+                "category": 3,
+                "code": 6203
+              }
+            ]
+          },
+          {
+            "file": "../node_modules/typescript/lib/lib.dom.d.ts",
+            "start": 761037,
+            "length": 9,
+            "messageText": "Cannot redeclare block-scoped variable 'WebSocket'.",
+            "category": 1,
+            "code": 2451,
+            "relatedInformation": [
+              {
+                "file": "../index.ts",
+                "start": 209,
+                "length": 9,
+                "messageText": "'WebSocket' was also declared here.",
+                "category": 3,
+                "code": 6203
+              }
+            ]
+          }
+        ]
+      ],
       "../node_modules/typescript/lib/lib.dom.iterable.d.ts",
       "../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
       "../node_modules/typescript/lib/lib.scripthost.d.ts",
@@ -1653,7 +1692,6 @@
       "../node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "../node_modules/typescript/lib/lib.esnext.bigint.d.ts",
       "../node_modules/typescript/lib/lib.es2017.full.d.ts",
-      "../node_modules/@types/socket.io-client/index.d.ts",
       "../node_modules/@types/node/globals.d.ts",
       "../node_modules/@types/node/assert.d.ts",
       "../node_modules/@types/node/async_hooks.d.ts",
@@ -1707,7 +1745,38 @@
       "../node_modules/@types/serve-static/index.d.ts",
       "../node_modules/@types/express/index.d.ts",
       "../node_modules/@types/socket.io/index.d.ts",
-      "../index.ts"
+      "../node_modules/@types/socket.io-client/index.d.ts",
+      [
+        "../index.ts",
+        [
+          {
+            "file": "../index.ts",
+            "start": 209,
+            "length": 9,
+            "messageText": "Cannot redeclare block-scoped variable 'WebSocket'.",
+            "category": 1,
+            "code": 2451,
+            "relatedInformation": [
+              {
+                "file": "../node_modules/typescript/lib/lib.dom.d.ts",
+                "start": 759688,
+                "length": 9,
+                "messageText": "'WebSocket' was also declared here.",
+                "category": 3,
+                "code": 6203
+              },
+              {
+                "file": "../node_modules/typescript/lib/lib.dom.d.ts",
+                "start": 761037,
+                "length": 9,
+                "messageText": "and here.",
+                "category": 3,
+                "code": 6204
+              }
+            ]
+          }
+        ]
+      ]
     ]
   },
   "version": "3.7.5"
