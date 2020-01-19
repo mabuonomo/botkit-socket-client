@@ -19,6 +19,10 @@ export default class BotKitClient {
     return this.config.userGuid;
   }
 
+  /**
+   * Send e text message
+   * @param text
+   */
   send(text: string) {
     this.deliverMessage({
       type: ConnectEvent.MESSAGE,
@@ -30,11 +34,18 @@ export default class BotKitClient {
     return false;
   }
 
+  /**
+   * Create a json version of IbotKitMessage
+   * @param message
+   */
   private deliverMessage(message: IBotkitMessage) {
     console.log(message);
     this.socket.send(JSON.stringify(message));
   }
 
+  /**
+   * Connect to remote botkit websocket
+   */
   private connectWebsocket() {
     // Create WebSocket connection.
     this.socket = new ws(this.config.ws_url);
