@@ -1,4 +1,4 @@
-# WIP: Botkit socket client
+# Botkit socket client
 
 A small botkit (https://botkit.ai/) socket client library written in typescript
 
