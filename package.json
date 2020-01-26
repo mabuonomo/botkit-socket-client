@@ -1,6 +1,6 @@
 {
   "name": "botkit-socket-client",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A small botkit socket client library written in typescript",
   "scripts": {
     "format": "prettier --config ./.prettierrc --write \"./src/**.js\" \"./src/**/*.ts\"",
