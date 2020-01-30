@@ -3,6 +3,11 @@
 A small botkit (https://botkit.ai/) socket client library written in typescript
 
 ## Usage
+Install
+```sh
+npm i --save botkit-socket-client
+```
+
 Import the library
 ```html
  <script src="../dist/dev/botkit.js"></script>
