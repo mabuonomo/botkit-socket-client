@@ -10,7 +10,7 @@ npm i --save botkit-socket-client
 
 Import the library
 ```html
- <script src="../dist/dev/botkit.js"></script>
+ <script src="../dist/prod/botkit.js"></script>
 ```
 
 Create a client and send a message
