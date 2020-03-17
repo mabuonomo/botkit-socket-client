@@ -88,5 +88,8 @@
   },
   "setupFiles": [
     "./setupJest.js"
-  ]
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
